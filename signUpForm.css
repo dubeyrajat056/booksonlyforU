@@ -1,86 +1,62 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+	background-color: white;
+}
+.main{
+	width: 350px;
+	height: 500px;
+	overflow: hidden;
+	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+	border-radius: 10px;
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    border:.1rem solid rgba(0,0,0,.1);
+}
+#chk{
+	display: none;
+}
+.signup{
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+label{
+	color:red;
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	margin: 60px;
+	font-weight: bold;
+	cursor: pointer;
+}
+input{
+	width: 60%;
+	height: 20px;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: 1px solid grey;
+	outline: none;
+	border-radius: 5px;
+}
+button{
+	width: 66%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: red;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	border: none;
+	border-radius: 5px;
 }
 
-.container {
-  height: 100vh;
-  width: 100%;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  background-color: white;
-}
-
-.card {
-  border-radius: 10px;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-  width: 100%;
-  height: 60%;
-  background-color: #ffffff;
-  padding: 10px 20px;
-  margin: 22px;
-}
-
-.card_title {
-  text-align: center;
-  padding: 10px;
-  margin: 10px 0 10px 0;
-}
-
-.card_title h3 {
-  font-size: 26px;
-  font-weight: 500;
-}
-
-.form input {
-  margin: 10px 0;
-  width: 100%;
-  background-color: #e2e2e2;
-  border: none;
-  outline: none;
-  padding: 12px 20px;
-  border-radius: 4px;
-}
-
-.form button {
-  background-color: red;
-  color: #ffffff;
-  font-size: 16px;
-  outline: none;
-  border-radius: 5px;
-  border: none;
-  padding: 8px 15px;
-  width: 100%;
-  margin: 10px 0 10px 0;
-}
-
-.card_terms {
-  display: flex;
-  align-items: center;
-  margin: 10px 0 10px 0;
-}
-
-.card_terms input[type="checkbox"] {
-  background-color: #e2e2e2;
-}
-
-.card_terms span {
-  margin: 5px;
-  font-size: 13px;
-}
-
-.card a {
-  color: red;
-  text-decoration: none;
-}
-
-@media screen and (min-width: 700px) {
-  .card {
-    max-width: 23%;
-  }
-}
