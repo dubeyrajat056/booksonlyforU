@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI QR Code Generator</title>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+<h2>Generate UPI QR Code for Payment</h2>
+
+<form id="qrForm">
+    <label for="upiId">Your UPI ID:</label>
+    <input type="text" id="upiId" required>
+
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" required>
+
+    <button type="button" onclick="generateQRCode()">Generate QR Code</button>
+</form>
+
+<div id="qrcode"></div>
+
+<script>
+    function generateQRCode() {
+        // Retrieve input values
+        const upiId = document.getElementById('upiId').value;
+        const amount = document.getElementById('amount').value;
+
+        // Validate input (you may need more robust validation in a real-world scenario)
+        if (!upiId || isNaN(amount)) {
+            alert('Please fill in all fields');
+            return;
+        }
+
+        // Concatenate UPI ID and amount for payment
+        const paymentText = `upi://pay?pa=${upiId}&mc=123&tid=123&tr=123&tn=Payment&am=${amount}&cu=INR&url=https://example.com`;
+
+        // Generate QR code
+        const qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: paymentText,
+            width: 128,
+            height: 128
+        });
+
+        // Optionally, you can display the payment details (for demonstration purposes)
+        alert(`Generated QR Code for payment:\n\n${paymentText}`);
+    }
+</script>
+
+</body>
+</html>
